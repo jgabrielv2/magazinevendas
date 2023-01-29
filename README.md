@@ -1,0 +1,3 @@
+# magazinevendas
+
+Loja virtual
