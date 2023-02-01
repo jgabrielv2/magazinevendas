@@ -1,6 +1,5 @@
 package app.magazinevendas.modelo;
 
-import app.magazinevendas.modelo.Categoria;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -27,9 +26,6 @@ public class Produto {
 
     public Produto() {
     }
-
-
-
 
     public Produto(String nome, BigDecimal preco, String cor, String descricao, Categoria categoria) {
         this.nome = nome;

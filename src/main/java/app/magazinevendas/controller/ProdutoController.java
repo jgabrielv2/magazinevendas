@@ -40,6 +40,10 @@ public class ProdutoController {
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return "ProdutoController{" +
+                "produtoService=" + produtoService +
+                '}';
+    }
 }
