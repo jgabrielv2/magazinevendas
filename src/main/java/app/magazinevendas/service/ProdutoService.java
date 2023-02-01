@@ -7,8 +7,7 @@ import app.magazinevendas.modelo.Produto;
 
 import java.util.List;
 
-
-public interface IProdutoService {
+public interface ProdutoService {
 
     Produto create(ProdutoDto produtoDto);
 
@@ -18,7 +17,7 @@ public interface IProdutoService {
 
     List<Produto> getAllByCategoria(Categoria categoria);
 
-    Produto update(ProdutoDto produtoDto);
+    Produto update(Long id, ProdutoDto produtoDto);
 
-    Produto delete(Long id);
+    void delete(Long id);
 }

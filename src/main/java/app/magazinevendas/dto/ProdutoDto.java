@@ -1,5 +1,6 @@
 package app.magazinevendas.dto;
 
+import app.magazinevendas.modelo.Categoria;
 import app.magazinevendas.modelo.Produto;
 
 import java.io.Serializable;
@@ -14,9 +15,9 @@ public class ProdutoDto implements Serializable {
     private final BigDecimal preco;
     private final String cor;
     private final String descricao;
-    private final CategoriaDto categoria;
+    private final Categoria categoria;
 
-    public ProdutoDto(String nome, BigDecimal preco, String cor, String descricao, CategoriaDto categoria) {
+    public ProdutoDto(String nome, BigDecimal preco, String cor, String descricao, Categoria categoria) {
         this.nome = nome;
         this.preco = preco;
         this.cor = cor;
@@ -40,7 +41,7 @@ public class ProdutoDto implements Serializable {
         return descricao;
     }
 
-    public CategoriaDto getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 

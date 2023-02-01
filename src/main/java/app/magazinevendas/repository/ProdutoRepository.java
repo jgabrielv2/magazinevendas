@@ -1,7 +1,11 @@
 package app.magazinevendas.repository;
 
+import app.magazinevendas.modelo.Categoria;
 import app.magazinevendas.modelo.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
+    List<Produto> findByCategoria(Categoria categoria);
 }
