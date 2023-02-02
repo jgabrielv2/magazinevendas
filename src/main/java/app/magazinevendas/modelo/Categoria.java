@@ -9,6 +9,7 @@ public class Categoria {
     @Column(name = "id")
     private Long id;
 
+    private String nome;
     public Categoria() {
 
     }
@@ -16,9 +17,6 @@ public class Categoria {
     public Categoria(String nome) {
         this.nome = nome;
     }
-
-    private String nome;
-
 
 
     public void setNome(String nome) {
