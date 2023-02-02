@@ -13,7 +13,7 @@ public class CategoriaController {
 
     private final CategoriaService categoriaService;
 
-    public CategoriaController(CategoriaService categoriaService) {
+    public CategoriaController(CategoriaService categoriaService){
         this.categoriaService = categoriaService;
     }
 
@@ -22,18 +22,13 @@ public class CategoriaController {
         return categoriaService.create(categoriaDto);
     }
 
-    @GetMapping("nome/{nome}")
-    public Categoria findByNome(@PathVariable String nome){
-        return categoriaService.getByNome(nome);
-    }
-
-    @GetMapping("id/{id}")
-    public Categoria findById(@PathVariable Long id){
+    @GetMapping("{id}")
+    public Categoria getById(@PathVariable Long id){
         return categoriaService.getById(id);
     }
 
     @GetMapping
-    public List<Categoria> findAll(){
+    public List<Categoria> getAll(){
         return categoriaService.getAll();
     }
 
@@ -45,5 +40,12 @@ public class CategoriaController {
     @DeleteMapping("{id}")
     public void delete(@PathVariable Long id){
         categoriaService.delete(id);
+    }
+
+    @Override
+    public String toString() {
+        return "CategoriaController{" +
+                "categoriaService=" + categoriaService +
+                '}';
     }
 }

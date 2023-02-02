@@ -6,20 +6,17 @@ import jakarta.persistence.*;
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     private Long id;
 
-    private String nome;
-    public Categoria() {
 
+    private String nome;
+
+
+    public Categoria() {
     }
 
     public Categoria(String nome) {
-        this.nome = nome;
-    }
-
-
-    public void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -27,8 +24,16 @@ public class Categoria {
         return nome;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override

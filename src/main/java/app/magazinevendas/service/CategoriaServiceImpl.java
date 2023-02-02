@@ -12,7 +12,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     private final CategoriaRepository categoriaRepository;
 
-    public CategoriaServiceImpl(CategoriaRepository categoriaRepository) {
+    public CategoriaServiceImpl(CategoriaRepository categoriaRepository){
         this.categoriaRepository = categoriaRepository;
     }
 
@@ -24,18 +24,13 @@ public class CategoriaServiceImpl implements CategoriaService {
     }
 
     @Override
-    public List<Categoria> getAll() {
-        return categoriaRepository.findAll();
-    }
-
-    @Override
-    public Categoria getByNome(String nome) {
-        return categoriaRepository.findByNomeIgnoreCase(nome);
-    }
-
-    @Override
     public Categoria getById(Long id) {
         return categoriaRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public List<Categoria> getAll() {
+        return categoriaRepository.findAll();
     }
 
     @Override
@@ -47,13 +42,6 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     @Override
     public void delete(Long id) {
-    categoriaRepository.deleteById(id);
-    }
-
-    @Override
-    public String toString() {
-        return "CategoriaServiceImpl{" +
-                "categoriaRepository=" + categoriaRepository +
-                '}';
+        categoriaRepository.deleteById(id);
     }
 }

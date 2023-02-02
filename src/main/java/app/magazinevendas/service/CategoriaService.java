@@ -7,16 +7,15 @@ import java.util.List;
 
 public interface CategoriaService {
 
-    Categoria create(CategoriaDto categoriaDto);
-
-    List<Categoria> getAll();
-
-    Categoria getByNome(String nome);
+    Categoria create (CategoriaDto categoriaDto);
 
     Categoria getById(Long id);
+
+    List<Categoria> getAll();
 
     Categoria update(Long id, CategoriaDto categoriaDto);
 
     void delete(Long id);
+
 
 }
