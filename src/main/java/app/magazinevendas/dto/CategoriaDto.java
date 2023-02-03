@@ -7,7 +7,10 @@ import java.util.Objects;
  * A DTO for the {@link app.magazinevendas.modelo.Categoria} entity
  */
 public class CategoriaDto implements Serializable {
-    private final String nome;
+    private String nome;
+
+    public CategoriaDto() {
+    }
 
     public CategoriaDto(String nome) {
         this.nome = nome;

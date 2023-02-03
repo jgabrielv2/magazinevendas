@@ -17,9 +17,15 @@ public class CategoriaController {
         this.categoriaService = categoriaService;
     }
 
+
     @PostMapping
     public Categoria create(@RequestBody CategoriaDto categoriaDto){
         return categoriaService.create(categoriaDto);
+    }
+
+    @GetMapping("{nome}")
+    public Categoria getByNome(@PathVariable String nome){
+        return categoriaService.getByNome(nome);
     }
 
     @GetMapping("{id}")

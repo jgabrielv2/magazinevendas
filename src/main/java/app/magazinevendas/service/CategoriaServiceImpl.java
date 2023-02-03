@@ -29,6 +29,11 @@ public class CategoriaServiceImpl implements CategoriaService {
     }
 
     @Override
+    public Categoria getByNome(String nome) {
+        return categoriaRepository.findByNomeIgnoreCase(nome);
+    }
+
+    @Override
     public List<Categoria> getAll() {
         return categoriaRepository.findAll();
     }

@@ -11,6 +11,8 @@ public interface CategoriaService {
 
     Categoria getById(Long id);
 
+    Categoria getByNome(String nome);
+
     List<Categoria> getAll();
 
     Categoria update(Long id, CategoriaDto categoriaDto);
